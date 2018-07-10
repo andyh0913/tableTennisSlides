@@ -27,22 +27,37 @@ a:hover {
 
 /* layout */
 
-.thread-item {
-	position: relative;
-	heidht: 70px;
+.thread-list {
+	display: flex;
+	flex-direction: column;
 }
 
-.thread-item_left {
-	float: left;
-	width: 100px;
-	padding: 15px 10px;
+.thread-head {
+	flex-basis: 33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.thread-body {
+	flex-basis: 67%;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+}
+
+.thread-line {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
 .thread-item_right {
-	float: left;
-	width: calc(100% - 150px);
-	padding: 20px 10px;
-	border-bottom: 1px solid rgba(0, 0, 0, .10);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .thread-from {
@@ -72,5 +87,13 @@ a:hover {
 }
 .clearfix {
   zoom:1; /* For IE 6/7 (trigger hasLayout) */
+  display: flex;
+  flex-direction: row;
 }
+.clearfix-child {
+	zoom: 0.8;
+	flex-basis: 50%;
+}
+
+
 Status API Training Shop Blog About
